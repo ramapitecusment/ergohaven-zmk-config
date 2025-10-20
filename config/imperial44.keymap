@@ -24,10 +24,10 @@
 
         nav {
             bindings = <
-&trans  &kp N1     &kp N2     &kp N3      &kp N4     &kp N5                             &kp N6        &kp N7        &kp N8     &kp N9     &kp N0         &trans
-&trans  &kp HOME   &kp INS    &kp DELETE  &kp END    &kp LA(LSHFT)                      &trans        &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)  &kp PRINTSCREEN  &trans    &trans  &kp CAPSLOCK  &kp LC(LEFT)  &kp PG_DN  &kp PG_UP  &kp LC(RIGHT)  &trans
-                                          &trans     &trans           &trans    &trans  &mo 3         &trans
+&kp ESCAPE      &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                              &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RPAR      &kp BACKSPACE
+&kp TAB         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0  &kp GRAVE
+&kp LEFT_SHIFT  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F11         &kp F12    &kp F6        &kp F7         &kp F8        &kp F9                &kp F10       &kp RIGHT_SHIFT
+                                                          &kt LCTRL     &trans        &kp LEFT_ALT    &kp SPACE  &mo 3         &kp ENTER
             >;
 
             display-name = "Navigation";
@@ -35,10 +35,10 @@
 
         sym {
             bindings = <
-&trans  &kp AT    &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET  &kp LBKT  &kp UNDER  &kp RBKT  &trans    &trans
-&trans  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &trans
-&trans  &kp HASH  &kp STAR  &kp COLON  &kp FSLH  &trans     &trans    &trans  &trans     &kp PIPE  &kp TILDE  &kp AMPS  &kp DLLR  &trans
-                                       &trans    &mo 3      &trans    &trans  &trans     &trans
+&kp ESCAPE  &trans     &trans    &trans     &trans     &trans                                      &trans    &kp C_VOLUME_UP    &kp UP    &trans     &kp PAGE_UP    &kp BACKSPACE
+&kp TAB     &kp MINUS  &kp PLUS  &kp EQUAL  &kp UNDER  &kp BACKSLASH                               &kp HOME  &kp LEFT           &kp DOWN  &kp RIGHT  &kp END        &kp DELETE
+&kp LSHFT   &trans     &trans    &trans     &trans     &kp PRINTSCREEN  &kp LEFT_GUI    &trans     &trans    &kp C_VOLUME_DOWN  &trans    &trans     &kp PAGE_DOWN  &kp RSHFT
+                                            &kp LCTRL  &mo 3            &kp LALT        &kp SPACE  &trans    &kp ENTER
             >;
 
             display-name = "Symbols";
