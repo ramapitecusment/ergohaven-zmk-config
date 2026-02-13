@@ -5,15 +5,30 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        thumb_ht: thumb_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_HT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            retro-tap;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E  &kp R      &kp T                             &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp TAB    &kp A  &kp S  &kp D  &kp F      &kp G                             &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp V      &kp B  &kp LBKT        &kp RBKT   &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LCTRL  &mo 1  &kp LEFT_ALT    &kp SPACE  &mo 2  &kp ENTER
+&kp ESC    &kp Q  &kp W  &kp E  &kp R      &kp T                                        &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp TAB    &kp A  &kp S  &kp D  &kp F      &kp G                                        &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&kp LSHFT  &kp Z  &kp X  &kp C  &kp V      &kp B  &kp LBKT        &kp RBKT              &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LCTRL  &mo 1  &kp LEFT_ALT    &thumb_ht LGUI SPACE  &mo 2  &kp ENTER
             >;
 
             display-name = "Base";
@@ -24,10 +39,10 @@
 
         nav {
             bindings = <
-&kp ESCAPE      &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                              &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RPAR      &kp BACKSPACE
-&kp TAB         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0  &kp GRAVE
-&kp LEFT_SHIFT  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F11         &kp F12    &kp F6        &kp F7         &kp F8        &kp F9                &kp F10       &kp RIGHT_SHIFT
-                                                          &kp LCTRL     &trans        &kp LEFT_ALT    &kp SPACE  &mo 3         &kp ENTER
+&kp ESCAPE      &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RPAR      &kp BACKSPACE
+&kp TAB         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                        &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0  &kp GRAVE
+&kp LEFT_SHIFT  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F11         &kp F12               &kp F6        &kp F7         &kp F8        &kp F9                &kp F10       &kp RIGHT_SHIFT
+                                                          &kp LCTRL     &trans        &kp LEFT_ALT    &thumb_ht LGUI SPACE  &mo 3         &kp ENTER
             >;
 
             display-name = "Nav";
