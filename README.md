@@ -20,16 +20,28 @@ It maps common Windows actions to their macOS equivalents for the `EH Imperial44
 - `Win+Space` for language switching
 - Windows-style text navigation for `Home`, `End`, `Ctrl+Left`, `Ctrl+Right`, and `Ctrl+Backspace`
 
-On macOS, install Karabiner-Elements and run:
+On macOS, run:
 
 ```sh
-./host/macos/install-karabiner-rule.sh
+./host/macos/bootstrap.sh
 ```
 
-The installer enables the rule and turns on `Modify events` for `EH Imperial44`.
+If Homebrew is not installed yet, either install it first or let the bootstrap run the official installer:
+
+```sh
+./host/macos/bootstrap.sh --install-homebrew
+```
+
+The bootstrap installs Karabiner-Elements if needed, enables the shortcut rule, and turns on `Modify events` for `EH Imperial44`.
 
 If shortcuts do not work, check:
 
 ```text
 Karabiner-Elements -> Devices -> EH Imperial44 -> Modify events
+```
+
+Then run:
+
+```sh
+./host/macos/doctor.sh
 ```

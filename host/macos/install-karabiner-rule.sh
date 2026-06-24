@@ -70,6 +70,7 @@ remove_descriptions = {
     "Ctrl+Shift+1 selects ABC; Ctrl+Shift+2 selects Russian",
     "Imperial44 Windows-style shortcuts",
     "Windows-style shortcuts on macOS",
+    "Imperial44 Windows-style shortcuts on macOS",
 }
 rules[:] = [
     rule

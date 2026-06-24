@@ -21,7 +21,25 @@ The installer enables Karabiner event modification for the `EH Imperial44` devic
 - vendor id: `7504`
 - product id: `24926`
 
-## Install
+## Bootstrap Install
+
+```sh
+./host/macos/bootstrap.sh
+```
+
+If Homebrew is missing:
+
+```sh
+./host/macos/bootstrap.sh --install-homebrew
+```
+
+The bootstrap does three things:
+
+- Installs Karabiner-Elements if needed.
+- Installs and enables `host/karabiner/imperial44-windows-shortcuts.json`.
+- Enables `Modify events` for `EH Imperial44`.
+
+To reinstall only the Karabiner rule:
 
 ```sh
 ./host/macos/install-karabiner-rule.sh
@@ -36,6 +54,12 @@ Karabiner-Elements -> Devices -> EH Imperial44 -> Modify events
 ## macOS Requirements
 
 Karabiner-Elements must be installed and approved in macOS System Settings.
+
+Run the doctor script for a local status report:
+
+```sh
+./host/macos/doctor.sh
+```
 
 If language switching does not work, check that macOS has at least two input sources enabled:
 
