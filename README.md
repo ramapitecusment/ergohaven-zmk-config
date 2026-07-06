@@ -16,7 +16,10 @@ It maps common Windows actions to their macOS equivalents for the `EH Imperial44
 - `Ctrl+C/X/V/A/Z/Y/S/F/R/T/W/N/O/P/L`
 - `Alt+Tab`
 - `Alt+F4`
+- `Alt+Left` / `Alt+Right` for browser/Finder back/forward
 - `Ctrl+Shift+T` for reopening the last closed browser tab/page
+- `Ctrl+Shift+R`, `Ctrl+Shift+N`, and `Ctrl+Shift+P`
+- `Ctrl+=`, `Ctrl+-`, and `Ctrl+0` for zoom
 - `Alt+Shift` for language switching
 - `Win+Space` for language switching
 - Windows-style text navigation for `Home`, `End`, `Ctrl+Left`, `Ctrl+Right`, and `Ctrl+Backspace`
