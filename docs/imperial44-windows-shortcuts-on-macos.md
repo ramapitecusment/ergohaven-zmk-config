@@ -16,6 +16,8 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 - `Ctrl+Left` / `Ctrl+Right` -> previous/next word.
 - `Ctrl+Backspace` -> delete previous word.
 
+`Alt+Tab` uses Karabiner's native `to_if_other_key_pressed` behavior so holding `Alt` keeps the macOS app switcher open like Windows, instead of sending a brittle one-shot `Command+Tab`.
+
 The installer enables Karabiner event modification for the `EH Imperial44` device:
 
 - vendor id: `7504`
@@ -68,6 +70,23 @@ System Settings -> Keyboard -> Text Input -> Edit
 ```
 
 For your current setup, macOS has `ABC`, `Russian`, and `Kazakh` enabled.
+
+## Native Karabiner Surfaces
+
+The setup uses supported Karabiner surfaces:
+
+- `karabiner_cli --lint-complex-modifications` validates the generated rule before install.
+- `karabiner_cli --show-settings-window-guidance` checks permissions, driver status, and virtual keyboard readiness in `doctor.sh`.
+- `karabiner_cli --list-connected-devices` confirms the Imperial44 vendor/product ids.
+- Complex modification JSON is installed under `~/.config/karabiner/assets/complex_modifications/` and enabled in `~/.config/karabiner/karabiner.json`.
+
+Useful Karabiner features to consider later:
+
+- `frontmost_application_if` / `frontmost_application_unless`: app-specific exceptions, for example keeping real shell `Ctrl+C` in Terminal while using Windows copy elsewhere.
+- `input_source_if` / `input_source_unless`: mappings that only run for a specific macOS input source.
+- `to.select_input_source`: direct input source selection if you later want a dedicated English/Russian/Kazakh switch key.
+- `to.from_event`: temporary pass-through modes for apps where the Windows remaps should be disabled.
+- JavaScript complex modifications: useful if the JSON grows hard to maintain, but the current generated JSON is simpler and works with the CLI linter.
 
 ## Notes
 
