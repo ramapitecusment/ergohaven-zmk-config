@@ -10,6 +10,7 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 - `Alt+Tab` -> macOS app switcher.
 - `Alt+Shift+Tab` -> reverse macOS app switcher.
 - `Alt+F4` -> close the current macOS window/tab with `Command+W`.
+- `Ctrl+Shift+T` -> reopen the last closed browser tab/page.
 - `Alt+Shift` -> switch input source.
 - `Win+Space` -> switch input source.
 - `Home` / `End` -> beginning/end of line.
