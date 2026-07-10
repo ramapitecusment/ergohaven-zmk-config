@@ -90,4 +90,6 @@ Quick test in a normal text field:
   Ctrl+A should select all.
   Ctrl+D should bookmark/add favorite where Command+D normally does.
   Alt+Tab should switch apps.
+  Alt+Shift should switch the input source when released.
+  Alt+Shift+Tab should move backward without switching the input source.
 EOF

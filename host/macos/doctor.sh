@@ -66,4 +66,6 @@ In a normal text field:
   Ctrl+A should select all.
   Ctrl+D should behave like Command+D.
   Alt+Tab should switch apps.
+  Alt+Shift should switch the input source when released.
+  Alt+Shift+Tab should move backward without switching the input source.
 EOF

@@ -11,18 +11,33 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 - `Alt+Shift+Tab` -> reverse macOS app switcher.
 - `Alt+F4` -> close the current macOS window/tab with `Command+W`.
 - `Alt+Left` / `Alt+Right` -> browser/Finder back/forward.
+- `Ctrl+H` -> browser history (`Command+Y` in Chromium/Safari, `Command+Shift+H` in Firefox), never macOS Hide.
 - `Ctrl+Shift+T` -> reopen the last closed browser tab/page.
 - `Ctrl+Shift+R` -> hard reload in browsers.
+- `F5` / `Ctrl+F5` -> reload / hard reload in browsers.
 - `Ctrl+Shift+N` -> new private/incognito window in browsers that use this shortcut.
 - `Ctrl+Shift+P` -> new private window in Firefox and command palette in apps that use the Mac equivalent.
+- `Ctrl+E` / `Ctrl+K` -> focus browser address/search UI.
+- `Ctrl+J` -> browser downloads.
+- `Ctrl+U` -> page source in Chromium browsers while retaining the normal macOS mapping elsewhere.
+- `Ctrl+G` / `Ctrl+Shift+G` -> next/previous search result.
+- `Ctrl+Shift+W` -> close the current window.
 - `Ctrl+=` / `Ctrl+-` / `Ctrl+0` -> zoom in/out/reset.
-- `Alt+Shift` -> switch input source.
+- `Alt+Shift` -> switch input source when the clean chord is released.
 - `Win+Space` -> switch input source.
-- `Home` / `End` -> beginning/end of line.
+- `Home` / `End` -> beginning/end of line while an accessibility text element is focused; otherwise the native event passes through.
 - `Ctrl+Left` / `Ctrl+Right` -> previous/next word.
+- `Ctrl+Shift+Left` / `Ctrl+Shift+Right` -> select previous/next word.
+- `Ctrl+Home` / `Ctrl+End` -> beginning/end of document.
+- `Ctrl+Shift+Home` / `Ctrl+Shift+End` -> select to beginning/end of document.
 - `Ctrl+Backspace` -> delete previous word.
+- `Ctrl+Delete` -> delete next word.
 
 `Alt+Tab` uses Karabiner's native `to_if_other_key_pressed` behavior so holding `Alt` keeps the macOS app switcher open like Windows, instead of sending a brittle one-shot `Command+Tab`.
+
+`Alt+Shift` is delayed until the chord is released without another key. This preserves Windows-style `Alt+Shift+Tab`: it moves backward in the app switcher without also changing the input source. Both key orders, `Alt` then `Shift` and `Shift` then `Alt`, are supported.
+
+`Home` and `End` use Karabiner 16's `accessibility.focused_ui_element.role_string` variable. This prevents `Home` from becoming `Command+Left` on a normal browser page, where Chromium would interpret it as browser Back. If an app does not expose accessibility focus information, the original `Home` or `End` event passes through.
 
 The installer enables Karabiner event modification for the `EH Imperial44` device:
 

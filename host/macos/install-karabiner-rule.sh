@@ -13,12 +13,17 @@ if [[ ! -f "${src}" ]]; then
   exit 1
 fi
 
-mkdir -p "${dst_dir}"
-cp "${src}" "${dst}"
-
 if [[ -x "${karabiner_cli}" ]]; then
-  "${karabiner_cli}" --lint-complex-modifications "${dst}"
+  "${karabiner_cli}" --lint-complex-modifications "${src}"
 fi
+
+mkdir -p "${dst_dir}"
+tmp_rule="$(mktemp "${dst}.tmp.XXXXXX")"
+trap 'rm -f "${tmp_rule}"' EXIT
+cp "${src}" "${tmp_rule}"
+chmod 0644 "${tmp_rule}"
+mv "${tmp_rule}" "${dst}"
+trap - EXIT
 
 python3 - "${dst}" "${config}" <<'PY'
 import json
@@ -80,7 +85,10 @@ rules[:] = [
 rules.extend(new_rules)
 
 config_path.parent.mkdir(parents=True, exist_ok=True)
-config_path.write_text(json.dumps(config, indent=4) + "\n")
+temporary_path = config_path.with_name(config_path.name + ".tmp")
+temporary_path.write_text(json.dumps(config, indent=4) + "\n")
+temporary_path.chmod(0o600)
+temporary_path.replace(config_path)
 PY
 
 cat <<EOF
