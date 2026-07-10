@@ -22,6 +22,7 @@ It maps common Windows actions to their macOS equivalents for the `EH Imperial44
 - `Ctrl+Shift+R`, `Ctrl+Shift+N`, and `Ctrl+Shift+P`
 - `Ctrl+E/K/J/U`, `F5`, and `Ctrl+F5` with browser-specific macOS equivalents
 - `Ctrl+G`, `Ctrl+Shift+G`, and `Ctrl+Shift+W`
+- `PrintScreen` for the macOS screenshot panel and `Shift+PrintScreen` for area capture
 - `Ctrl+=`, `Ctrl+-`, and `Ctrl+0` for zoom
 - `Alt+Shift` for language switching on chord release, without breaking `Alt+Shift+Tab`
 - `Win+Space` for language switching
