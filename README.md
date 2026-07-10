@@ -2,6 +2,10 @@
 
 Personal ZMK configuration for Ergohaven keyboards.
 
+## Imperial44 Power Management
+
+The wireless Imperial44 enters ZMK deep sleep after one hour of inactivity (`CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000`). Normal idle power saving remains enabled, so Bluetooth stays connected during shorter breaks. Changing this value requires rebuilding and flashing both keyboard halves.
+
 ## Imperial44 Windows Shortcuts on macOS
 
 This repo includes host OS settings for using Windows-style shortcuts on macOS with the Imperial44.
