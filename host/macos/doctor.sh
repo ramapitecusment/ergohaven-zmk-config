@@ -52,6 +52,12 @@ for device in profile.get("devices", []):
     identifiers = device.get("identifiers", {})
     if identifiers.get("vendor_id") == 7504 and identifiers.get("product_id") == 24926:
         print("  - EH Imperial44:", "Modify events enabled" if device.get("ignore") is False else "Modify events disabled")
+    if (
+        identifiers.get("vendor_id") == 7511
+        and identifiers.get("product_id") == 64096
+        and identifiers.get("is_pointing_device") is True
+    ):
+        print("  - 2.4G mouse:", "Modify events enabled" if device.get("ignore") is False else "Modify events disabled")
 PY
 else
   echo "missing: ${config}"
@@ -61,6 +67,7 @@ section "Expected Manual Checks"
 cat <<'EOF'
 In Karabiner-Elements:
   Devices -> EH Imperial44 -> Modify events must be enabled.
+  Devices -> 2.4G Wireless Device (mouse) -> Modify events must be enabled.
 
 In a normal text field:
   Ctrl+A should select all.

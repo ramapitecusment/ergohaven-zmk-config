@@ -53,19 +53,22 @@ imperial_identifiers = {
     "is_keyboard": True,
     "is_pointing_device": True,
 }
-for device in devices:
-    identifiers = device.get("identifiers", {})
-    if (
-        identifiers.get("vendor_id") == imperial_identifiers["vendor_id"]
-        and identifiers.get("product_id") == imperial_identifiers["product_id"]
-    ):
-        device["ignore"] = False
-        break
-else:
-    devices.append({
-        "identifiers": imperial_identifiers,
-        "ignore": False,
-    })
+mouse_identifiers = {
+    "vendor_id": 7511,
+    "product_id": 64096,
+    "is_pointing_device": True,
+}
+for required_identifiers in (imperial_identifiers, mouse_identifiers):
+    for device in devices:
+        identifiers = device.get("identifiers", {})
+        if all(identifiers.get(key) == value for key, value in required_identifiers.items()):
+            device["ignore"] = False
+            break
+    else:
+        devices.append({
+            "identifiers": required_identifiers,
+            "ignore": False,
+        })
 
 complex_modifications = profile.setdefault("complex_modifications", {})
 rules = complex_modifications.setdefault("rules", [])
@@ -98,7 +101,7 @@ Installed:
 Enabled in:
   ${config}
 
-The installer also enables "Modify events" for EH Imperial44 in Karabiner's Devices settings.
+The installer also enables "Modify events" for EH Imperial44 and the configured 2.4G mouse.
 
 Open /Applications/Karabiner-Elements.app if macOS permissions are not approved yet.
 EOF

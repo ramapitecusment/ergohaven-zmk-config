@@ -22,6 +22,7 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 - `Ctrl+U` -> page source in Chromium browsers while retaining the normal macOS mapping elsewhere.
 - `Ctrl+G` / `Ctrl+Shift+G` -> next/previous search result.
 - `Ctrl+Shift+W` -> close the current window.
+- `Ctrl+left click` -> `Command+left click`, including when the mouse is a separate HID device.
 - `PrintScreen` -> open the macOS Screenshot panel (`Shift+Command+5`).
 - `Shift+PrintScreen` -> capture a selected area (`Shift+Command+4`).
 - `Ctrl+=` / `Ctrl+-` / `Ctrl+0` -> zoom in/out/reset.
@@ -38,6 +39,8 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 `Alt+Tab` uses Karabiner's native `to_if_other_key_pressed` behavior so holding `Alt` keeps the macOS app switcher open like Windows, instead of sending a brittle one-shot `Command+Tab`.
 
 `Alt+Shift` is delayed until the chord is released without another key. This preserves Windows-style `Alt+Shift+Tab`: it moves backward in the app switcher without also changing the input source. Both key orders, `Alt` then `Shift` and `Shift` then `Alt`, are supported.
+
+`Ctrl+left click` is handled on the configured 2.4G mouse (vendor `7511`, product `64096`) while Control is held on the Imperial44. The installer enables `Modify events` for both devices; holding Shift at the same time is preserved.
 
 `Home` and `End` use Karabiner 16's `accessibility.focused_ui_element.role_string` variable. This prevents `Home` from becoming `Command+Left` on a normal browser page, where Chromium would interpret it as browser Back. If an app does not expose accessibility focus information, the original `Home` or `End` event passes through.
 
