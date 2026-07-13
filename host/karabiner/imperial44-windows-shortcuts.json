@@ -219,6 +219,48 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "period",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 7504,
+                  "product_id": 24926,
+                  "is_keyboard": true
+                }
+              ]
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.finder$"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "pointing_button": "button1",
             "modifiers": {
               "mandatory": [

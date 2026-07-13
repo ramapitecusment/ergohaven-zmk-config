@@ -23,6 +23,7 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 - `Ctrl+G` / `Ctrl+Shift+G` -> next/previous search result.
 - `Ctrl+Shift+W` -> close the current window.
 - `Ctrl+left click` -> `Command+left click`, including when the mouse is a separate HID device.
+- `Ctrl+Shift+.` -> show or hide hidden files in Finder.
 - `PrintScreen` -> open the macOS Screenshot panel (`Shift+Command+5`).
 - `Shift+PrintScreen` -> capture a selected area (`Shift+Command+4`).
 - `Ctrl+=` / `Ctrl+-` / `Ctrl+0` -> zoom in/out/reset.
