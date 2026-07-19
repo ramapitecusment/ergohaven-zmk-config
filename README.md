@@ -19,6 +19,7 @@ It maps common Windows actions to their macOS equivalents for the `EH Imperial44
 
 - `Ctrl+C/X/V/A/Z/Y/S/F/R/T/W/N/O/P/L`
 - `Alt+Tab`
+- `Alt+Esc` / `Alt+Shift+Esc` for switching windows of the current application
 - `Alt+F4`
 - `Alt+Left` / `Alt+Right` for browser/Finder back/forward
 - `Ctrl+H` for browser history without triggering macOS Hide

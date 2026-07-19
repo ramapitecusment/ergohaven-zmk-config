@@ -9,6 +9,7 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 - `Ctrl+C/X/V/A/Z/Y/S/F/R/T/W/N/O/P/L` -> common macOS `Command` shortcuts.
 - `Alt+Tab` -> macOS app switcher.
 - `Alt+Shift+Tab` -> reverse macOS app switcher.
+- `Alt+Esc` / `Alt+Shift+Esc` -> next/previous window of the current application.
 - `Alt+F4` -> close the current macOS window/tab with `Command+W`.
 - `Alt+Left` / `Alt+Right` -> browser/Finder back/forward.
 - `Ctrl+H` -> browser history (`Command+Y` in Chromium/Safari, `Command+Shift+H` in Firefox), never macOS Hide.
