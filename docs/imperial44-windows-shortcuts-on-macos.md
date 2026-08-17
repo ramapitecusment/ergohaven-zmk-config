@@ -7,6 +7,7 @@ This is a host-side Karabiner setup. It does not require changing the ZMK firmwa
 ## Enabled Shortcuts
 
 - `Ctrl+C/X/V/A/Z/Y/S/F/R/T/W/N/O/P/L` -> common macOS `Command` shortcuts.
+- `Ctrl+Shift+F` -> project-wide search (`Command+Shift+F`) in Android Studio and other IDEs.
 - `Alt+Tab` -> macOS app switcher.
 - `Alt+Shift+Tab` -> reverse macOS app switcher.
 - `Alt+Esc` / `Alt+Shift+Esc` -> next/previous window of the current application.

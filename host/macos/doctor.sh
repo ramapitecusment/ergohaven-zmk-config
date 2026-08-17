@@ -72,6 +72,7 @@ In Karabiner-Elements:
 In a normal text field:
   Ctrl+A should select all.
   Ctrl+D should behave like Command+D.
+  Ctrl+Shift+F should open project-wide search in an IDE.
   Alt+Tab should switch apps.
   Alt+Esc should switch windows of the current app.
   Alt+Shift+Esc should switch those windows in reverse.

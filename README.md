@@ -18,6 +18,7 @@ The setup is host-side. It does not require changing ZMK firmware.
 It maps common Windows actions to their macOS equivalents for the `EH Imperial44` device:
 
 - `Ctrl+C/X/V/A/Z/Y/S/F/R/T/W/N/O/P/L`
+- `Ctrl+Shift+F` for project-wide search in IDEs
 - `Alt+Tab`
 - `Alt+Esc` / `Alt+Shift+Esc` for switching windows of the current application
 - `Alt+F4`
